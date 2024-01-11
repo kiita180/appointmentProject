@@ -66,3 +66,4 @@ C:\Users\113-09\Desktop\appointmentProject-master\appointmentProject-master\obj\
 C:\Users\113-09\Desktop\appointmentProject-master\appointmentProject-master\obj\Debug\net8.0-windows\homework.genruntimeconfig.cache
 C:\Users\113-09\Desktop\appointmentProject-master\appointmentProject-master\obj\Debug\net8.0-windows\ref\homework.dll
 C:\Users\113-09\Desktop\appointmentProject-master\appointmentProject-master\obj\Debug\net8.0-windows\homework.addPatient.resources
+C:\Users\113-09\Desktop\appointmentProject-master\appointmentProject-master\obj\Debug\net8.0-windows\homework.sourcelink.json

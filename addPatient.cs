@@ -33,12 +33,13 @@ namespace homework
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             conn.Open();
-            cm = new MySqlCommand("insert into patient (Patient_name,Patient_id,Patient_idnum) value (@Patient_name,@Patient_id,@Patient_idnum)", conn);
+            cm = new MySqlCommand("insert into patient (Patient_name,Patient_id,Patient_idnum,Patient_address) value (@Patient_name,@Patient_id,@Patient_idnum,@Patient_address)", conn);
             MemoryStream ms = new MemoryStream();
             byte[] img = ms.ToArray();
             cm.Parameters.AddWithValue("@Patient_name", TxtPatinetName.Text);
             cm.Parameters.AddWithValue("@Patient_id", TxtPatientID.Text);
             cm.Parameters.AddWithValue("@Patient_idnum", TxtPatientPhone.Text);
+            cm.Parameters.AddWithValue("@Patient_address", Txtaddress.Text);
             cm.ExecuteNonQuery();
             conn.Close();
             foreach (Control c in this.Controls)
@@ -51,6 +52,8 @@ namespace homework
             
            //f.LoadPatient();
             MessageBox.Show("Record has been saved successfully");
+            Form1 f = new Form1();
+            f.Loadpatient();
         }
 
         private void addPatiend_Load(object sender, EventArgs e)

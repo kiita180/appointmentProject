@@ -88,16 +88,7 @@ namespace homework
                 //f.IbI
                 f.ShowDialog();
             }
-            if(ColName == "ColDelete" )
-            {
-                cm = new MySqlCommand("select * from Patient", cn);
-                cm.Parameters.AddWithValue("@Patient_idnum", db._id);
-                cn.Open();
-                cm.ExecuteNonQuery();
-                cn.Close();
-                MessageBox.Show("Record has been Delete successfully");
-                LoadPatient();
-            }
+            
         }
 
 

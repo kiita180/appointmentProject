@@ -39,6 +39,8 @@
             label1 = new Label();
             BtnAdd = new Button();
             BtnUpdate = new Button();
+            Txtaddress = new TextBox();
+            label5 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -101,7 +103,6 @@
             TxtPatinetName.Name = "TxtPatinetName";
             TxtPatinetName.Size = new Size(543, 31);
             TxtPatinetName.TabIndex = 16;
-           // TxtPatinetName.TextChanged += this.TxtPatinetName_TextChanged;
             // 
             // label4
             // 
@@ -160,11 +161,31 @@
             BtnUpdate.Text = "update";
             BtnUpdate.UseVisualStyleBackColor = false;
             // 
+            // Txtaddress
+            // 
+            Txtaddress.Location = new Point(270, 484);
+            Txtaddress.Margin = new Padding(4, 5, 4, 5);
+            Txtaddress.Name = "Txtaddress";
+            Txtaddress.Size = new Size(543, 31);
+            Txtaddress.TabIndex = 24;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(65, 484);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(140, 25);
+            label5.TabIndex = 23;
+            label5.Text = "Patient address:";
+            // 
             // addPatient
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(884, 915);
+            Controls.Add(Txtaddress);
+            Controls.Add(label5);
             Controls.Add(BtnUpdate);
             Controls.Add(BtnAdd);
             Controls.Add(panel1);
@@ -199,5 +220,7 @@
         public TextBox TxtPatientID;
         public TextBox TxtPatientPhone;
         public TextBox TxtPatinetName;
+        public TextBox Txtaddress;
+        private Label label5;
     }
 }

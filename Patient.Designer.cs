@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
-            c = new Button();
+            Btnadd = new Button();
             label3 = new Label();
             button1 = new Button();
             DgvPatient = new DataGridView();
             autoID = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            Patient_idnum = new DataGridViewTextBoxColumn();
+            address = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             ColEdit = new DataGridViewButtonColumn();
-            ColDelete = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgvPatient).BeginInit();
             SuspendLayout();
@@ -48,7 +48,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(12, 128, 222);
-            panel1.Controls.Add(c);
+            panel1.Controls.Add(Btnadd);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Top;
@@ -58,19 +58,19 @@
             panel1.Size = new Size(2485, 70);
             panel1.TabIndex = 1;
             // 
-            // c
+            // Btnadd
             // 
-            c.BackColor = Color.FromArgb(12, 128, 222);
-            c.FlatStyle = FlatStyle.Flat;
-            c.ForeColor = Color.White;
-            c.Location = new Point(639, 2);
-            c.Margin = new Padding(4, 5, 4, 5);
-            c.Name = "c";
-            c.Size = new Size(380, 58);
-            c.TabIndex = 21;
-            c.Text = "Create New Patient";
-            c.UseVisualStyleBackColor = false;
-            c.Click += c_Click_1;
+            Btnadd.BackColor = Color.FromArgb(12, 128, 222);
+            Btnadd.FlatStyle = FlatStyle.Flat;
+            Btnadd.ForeColor = Color.White;
+            Btnadd.Location = new Point(639, 2);
+            Btnadd.Margin = new Padding(4, 5, 4, 5);
+            Btnadd.Name = "Btnadd";
+            Btnadd.Size = new Size(380, 58);
+            Btnadd.TabIndex = 21;
+            Btnadd.Text = "Create New Patient";
+            Btnadd.UseVisualStyleBackColor = false;
+            Btnadd.Click += c_Click_1;
             // 
             // label3
             // 
@@ -100,16 +100,17 @@
             // 
             DgvPatient.AllowUserToAddRows = false;
             DgvPatient.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(12, 128, 222);
-            dataGridViewCellStyle1.Font = new Font("맑은 고딕", 9F);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            DgvPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            DgvPatient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(12, 128, 222);
+            dataGridViewCellStyle2.Font = new Font("맑은 고딕", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            DgvPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             DgvPatient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgvPatient.Columns.AddRange(new DataGridViewColumn[] { autoID, Column2, Column3, Column4, Column6, ColEdit, ColDelete });
+            DgvPatient.Columns.AddRange(new DataGridViewColumn[] { autoID, Column2, Column3, Patient_idnum, address, Column6, ColEdit });
             DgvPatient.Dock = DockStyle.Fill;
             DgvPatient.EnableHeadersVisualStyles = false;
             DgvPatient.Location = new Point(0, 70);
@@ -131,7 +132,7 @@
             autoID.Name = "autoID";
             autoID.ReadOnly = true;
             autoID.Visible = false;
-            autoID.Width = 150;
+            autoID.Width = 1000;
             // 
             // Column2
             // 
@@ -147,15 +148,23 @@
             Column3.MinimumWidth = 8;
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
-            Column3.Width = 150;
+            Column3.Width = 127;
             // 
-            // Column4
+            // Patient_idnum
             // 
-            Column4.HeaderText = "Patiend IdNum";
-            Column4.MinimumWidth = 8;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            Column4.Width = 150;
+            Patient_idnum.HeaderText = "Patiend IdNum";
+            Patient_idnum.MinimumWidth = 8;
+            Patient_idnum.Name = "Patient_idnum";
+            Patient_idnum.ReadOnly = true;
+            Patient_idnum.Width = 170;
+            // 
+            // address
+            // 
+            address.HeaderText = "Patient_address";
+            address.MinimumWidth = 8;
+            address.Name = "address";
+            address.ReadOnly = true;
+            address.Width = 174;
             // 
             // Column6
             // 
@@ -174,15 +183,6 @@
             ColEdit.Name = "ColEdit";
             ColEdit.ReadOnly = true;
             ColEdit.Width = 48;
-            // 
-            // ColDelete
-            // 
-            ColDelete.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            ColDelete.HeaderText = "Delete";
-            ColDelete.MinimumWidth = 8;
-            ColDelete.Name = "ColDelete";
-            ColDelete.ReadOnly = true;
-            ColDelete.Width = 71;
             // 
             // Patient
             // 
@@ -210,14 +210,14 @@
         private Panel panel1;
         private Label label3;
         private Button button1;
-        private Button c;
+        private Button Btnadd;
         private DataGridView DgvPatient;
         private DataGridViewTextBoxColumn autoID;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Patient_idnum;
+        private DataGridViewTextBoxColumn address;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewButtonColumn ColEdit;
-        private DataGridViewButtonColumn ColDelete;
     }
 }

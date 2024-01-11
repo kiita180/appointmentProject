@@ -53,7 +53,7 @@
             label7 = new Label();
             label5 = new Label();
             panel11 = new Panel();
-            label6 = new Label();
+            LbIPatient = new Label();
             label4 = new Label();
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             panel1.SuspendLayout();
@@ -344,7 +344,7 @@
             // panel11
             // 
             panel11.BackColor = Color.FromArgb(202, 81, 0);
-            panel11.Controls.Add(label6);
+            panel11.Controls.Add(LbIPatient);
             panel11.Controls.Add(label4);
             panel11.Location = new Point(27, 202);
             panel11.Margin = new Padding(4, 5, 4, 5);
@@ -352,18 +352,18 @@
             panel11.Size = new Size(310, 212);
             panel11.TabIndex = 11;
             // 
-            // label6
+            // LbIPatient
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 15F);
-            label6.ForeColor = Color.Yellow;
-            label6.Location = new Point(203, 153);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(49, 36);
-            label6.TabIndex = 8;
-            label6.Text = "00";
-            label6.UseMnemonic = false;
+            LbIPatient.AutoSize = true;
+            LbIPatient.Font = new Font("Microsoft Sans Serif", 15F);
+            LbIPatient.ForeColor = Color.Yellow;
+            LbIPatient.Location = new Point(203, 153);
+            LbIPatient.Margin = new Padding(4, 0, 4, 0);
+            LbIPatient.Name = "LbIPatient";
+            LbIPatient.Size = new Size(49, 36);
+            LbIPatient.TabIndex = 8;
+            LbIPatient.Text = "00";
+            LbIPatient.UseMnemonic = false;
             // 
             // label4
             // 
@@ -438,7 +438,7 @@
         private Label label7;
         private Label label5;
         private Panel panel11;
-        private Label label6;
+        private Label LbIPatient;
         private Label label4;
         public Panel panel1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
