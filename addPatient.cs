@@ -19,7 +19,7 @@ namespace homework
         public addPatient(Patient f)
         {
             InitializeComponent();
-          //this.f = f;
+            //this.f = f;
 
         }
 
@@ -27,7 +27,7 @@ namespace homework
         {
             this.Dispose();
         }
-        
+
 
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -49,14 +49,19 @@ namespace homework
                     c.Text = "";
                 }
             }
-            
-           //f.LoadPatient();
+
+            //f.LoadPatient();
             MessageBox.Show("Record has been saved successfully");
             Form1 f = new Form1();
             f.Loadpatient();
         }
 
         private void addPatiend_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtPatinetName_TextChanged(object sender, EventArgs e)
         {
 
         }

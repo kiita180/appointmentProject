@@ -53,5 +53,15 @@ namespace homework
             cn.Close();
             MessageBox.Show("appointment has been successfully");
         }
+
+        private void Dgvappointment_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

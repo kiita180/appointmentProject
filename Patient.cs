@@ -36,7 +36,7 @@ namespace homework
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
-                DgvPatient.Rows.Add(i, dr["Patient_name"], dr["Patient_id"], dr["Patient_Idnum"], "Edit", "Edit", "Delete", "Delete");
+                DgvPatient.Rows.Add(i, dr["Patient_name"], dr["Patient_id"], dr["Patient_Idnum"]);
             }
             cn.Close();
         }
@@ -88,7 +88,7 @@ namespace homework
                 //f.IbI
                 f.ShowDialog();
             }
-            
+
         }
 
 
@@ -104,6 +104,11 @@ namespace homework
         }
 
         private void DgvPatient_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

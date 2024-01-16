@@ -1,6 +1,6 @@
 ﻿namespace homework
 {
-    partial class Appointment
+    partial class FrmDiagonse
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            Dgvappointment = new DataGridView();
+            DgvDiagonse = new DataGridView();
             autoID = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -37,19 +37,19 @@
             address = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             ColEdit = new DataGridViewButtonColumn();
-            panel2 = new Panel();
+            panel1 = new Panel();
             Btnadd = new Button();
-            label1 = new Label();
-            button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)Dgvappointment).BeginInit();
-            panel2.SuspendLayout();
+            label3 = new Label();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)DgvDiagonse).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // Dgvappointment
+            // DgvDiagonse
             // 
-            Dgvappointment.AllowUserToAddRows = false;
-            Dgvappointment.AllowUserToDeleteRows = false;
-            Dgvappointment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            DgvDiagonse.AllowUserToAddRows = false;
+            DgvDiagonse.AllowUserToDeleteRows = false;
+            DgvDiagonse.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(12, 128, 222);
             dataGridViewCellStyle1.Font = new Font("맑은 고딕", 9F);
@@ -57,21 +57,23 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            Dgvappointment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            Dgvappointment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Dgvappointment.Columns.AddRange(new DataGridViewColumn[] { autoID, Column2, Column3, Patient_idnum, address, Column6, ColEdit });
-            Dgvappointment.Dock = DockStyle.Fill;
-            Dgvappointment.EnableHeadersVisualStyles = false;
-            Dgvappointment.Location = new Point(0, 70);
-            Dgvappointment.Margin = new Padding(4, 5, 4, 5);
-            Dgvappointment.Name = "Dgvappointment";
-            Dgvappointment.ReadOnly = true;
-            Dgvappointment.RowHeadersVisible = false;
-            Dgvappointment.RowHeadersWidth = 62;
-            Dgvappointment.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            Dgvappointment.Size = new Size(1634, 1128);
-            Dgvappointment.TabIndex = 4;
-            Dgvappointment.CellContentClick += Dgvappointment_CellContentClick;
+            DgvDiagonse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            DgvDiagonse.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgvDiagonse.Columns.AddRange(new DataGridViewColumn[] { autoID, Column2, Column3, Patient_idnum, address, Column6, ColEdit });
+            DgvDiagonse.Dock = DockStyle.Fill;
+            DgvDiagonse.EnableHeadersVisualStyles = false;
+            DgvDiagonse.Location = new Point(0, 70);
+            DgvDiagonse.Margin = new Padding(4, 5, 4, 5);
+            DgvDiagonse.Name = "DgvDiagonse";
+            DgvDiagonse.ReadOnly = true;
+            DgvDiagonse.RowHeadersVisible = false;
+            DgvDiagonse.RowHeadersWidth = 62;
+            DgvDiagonse.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DgvDiagonse.Size = new Size(1468, 701);
+            DgvDiagonse.TabIndex = 4;
+            DgvDiagonse.CellClick += DgvDiagonse_CellClick;
+            DgvDiagonse.CellContentClick += DgvDiagonse_CellContentClick;
+            DgvDiagonse.Resize += DgvPatient_Resize;
             // 
             // autoID
             // 
@@ -132,79 +134,76 @@
             ColEdit.ReadOnly = true;
             ColEdit.Width = 48;
             // 
-            // panel2
+            // panel1
             // 
-            panel2.BackColor = Color.FromArgb(12, 128, 222);
-            panel2.Controls.Add(Btnadd);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(button2);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(4, 5, 4, 5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1634, 70);
-            panel2.TabIndex = 3;
+            panel1.BackColor = Color.FromArgb(12, 128, 222);
+            panel1.Controls.Add(Btnadd);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(button1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1468, 70);
+            panel1.TabIndex = 3;
+            panel1.Resize += DgvPatient_Resize;
             // 
             // Btnadd
             // 
             Btnadd.BackColor = Color.FromArgb(12, 128, 222);
             Btnadd.FlatStyle = FlatStyle.Flat;
             Btnadd.ForeColor = Color.White;
-            Btnadd.Location = new Point(642, 7);
+            Btnadd.Location = new Point(639, 2);
             Btnadd.Margin = new Padding(4, 5, 4, 5);
             Btnadd.Name = "Btnadd";
             Btnadd.Size = new Size(380, 58);
             Btnadd.TabIndex = 21;
-            Btnadd.Text = "Create New Patient";
+            Btnadd.Text = "Create New Diagnse";
             Btnadd.UseVisualStyleBackColor = false;
-            Btnadd.Click += Btnadd_Click;
             // 
-            // label1
+            // label3
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 25F);
-            label1.ForeColor = Color.Yellow;
-            label1.Location = new Point(4, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(181, 58);
-            label1.TabIndex = 7;
-            label1.Text = "Patient";
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 25F);
+            label3.ForeColor = Color.Yellow;
+            label3.Location = new Point(4, 0);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(237, 58);
+            label3.TabIndex = 7;
+            label3.Text = "Diagonse";
             // 
-            // button2
+            // button1
             // 
-            button2.Dock = DockStyle.Right;
-            button2.Location = new Point(1581, 0);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(53, 70);
-            button2.TabIndex = 2;
-            button2.Text = "x";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button1.Dock = DockStyle.Right;
+            button1.Location = new Point(1415, 0);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(53, 70);
+            button1.TabIndex = 2;
+            button1.Text = "x";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // Appointment
+            // FrmDiagonse
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1634, 1198);
-            Controls.Add(Dgvappointment);
-            Controls.Add(panel2);
+            ClientSize = new Size(1468, 771);
+            Controls.Add(DgvDiagonse);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "Appointment";
-            Text = "Appointment";
-            WindowState = FormWindowState.Maximized;
-            Load += Appointment_Load;
-            ((System.ComponentModel.ISupportInitialize)Dgvappointment).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            Name = "FrmDiagonse";
+            Text = "FrmDiagonse";
+            ((System.ComponentModel.ISupportInitialize)DgvDiagonse).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView Dgvappointment;
+        private DataGridView DgvDiagonse;
         private DataGridViewTextBoxColumn autoID;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -212,9 +211,9 @@
         private DataGridViewTextBoxColumn address;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewButtonColumn ColEdit;
-        private Panel panel2;
+        private Panel panel1;
         private Button Btnadd;
-        private Label label1;
-        private Button button2;
+        private Label label3;
+        private Button button1;
     }
 }

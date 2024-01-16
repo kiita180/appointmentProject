@@ -11,6 +11,7 @@ namespace homework
         {
             InitializeComponent();
             Loadpatient();
+            //   Loadappointment();
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -24,23 +25,22 @@ namespace homework
 
 
         }
+
         public void Loadpatient()
         {
-
             cn.Open();
-            int i = 0;
-            cm = new MySqlCommand("select * from patient", cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
-            {
-                i++;
-            }
-
-            dr.Close();
+            cm = new MySqlCommand("select count(*) from patient", cn);
+            LbIPatient.Text = cm.ExecuteScalar().ToString();
             cn.Close();
-            LbIPatient.Text = i.ToString();
-            //LbIPatient.Text=cm.ExecuteScalar().ToString();
+
         }
+        //public void Loadappointment()
+        //{
+        //    cn.Open();
+        //    cm = new MySqlCommand("select * from patient where Patient_idnum ='idnum'", cn);
+        //    Lblcontappointment.Text = cm.ExecuteScalar().ToString();
+        //    cn.Close();
+        //}
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -79,11 +79,33 @@ namespace homework
 
             IBLDATA.Text = DateTime.Now.ToString("F"); // label1에 현재날짜시간 표시, F:자세한 전체 날짜/시
             Loadpatient();
+            //   Loadappointment();
         }
 
         private void IBLDATA_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LbIPatient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lblcontappointment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Appointment p = new Appointment(this);
+            p.Show();
         }
     }
 }

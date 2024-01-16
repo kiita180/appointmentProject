@@ -38,7 +38,6 @@
             label2 = new Label();
             label1 = new Label();
             BtnAdd = new Button();
-            BtnUpdate = new Button();
             Txtaddress = new TextBox();
             label5 = new Label();
             panel1.SuspendLayout();
@@ -64,9 +63,9 @@
             label3.Location = new Point(4, 0);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(294, 58);
+            label3.Size = new Size(161, 58);
             label3.TabIndex = 7;
-            label3.Text = "New Patient";
+            label3.Text = "새 환자";
             // 
             // button1
             // 
@@ -103,6 +102,7 @@
             TxtPatinetName.Name = "TxtPatinetName";
             TxtPatinetName.Size = new Size(543, 31);
             TxtPatinetName.TabIndex = 16;
+            TxtPatinetName.TextChanged += TxtPatinetName_TextChanged;
             // 
             // label4
             // 
@@ -110,29 +110,29 @@
             label4.Location = new Point(65, 420);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(160, 25);
+            label4.Size = new Size(130, 25);
             label4.TabIndex = 14;
-            label4.Text = "Patient IdNumber:";
+            label4.Text = "환자 주민번호:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(103, 355);
+            label2.Location = new Point(122, 353);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(92, 25);
+            label2.Size = new Size(73, 25);
             label2.TabIndex = 13;
-            label2.Text = "Patient id:";
+            label2.Text = "환자 id:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(103, 297);
+            label1.Location = new Point(83, 298);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(122, 25);
+            label1.Size = new Size(118, 25);
             label1.TabIndex = 12;
-            label1.Text = "Patient name:";
+            label1.Text = "새 환자 이름:";
             // 
             // BtnAdd
             // 
@@ -142,24 +142,11 @@
             BtnAdd.Location = new Point(68, 611);
             BtnAdd.Margin = new Padding(4, 5, 4, 5);
             BtnAdd.Name = "BtnAdd";
-            BtnAdd.Size = new Size(380, 58);
+            BtnAdd.Size = new Size(745, 58);
             BtnAdd.TabIndex = 21;
-            BtnAdd.Text = "Add New";
+            BtnAdd.Text = "추가";
             BtnAdd.UseVisualStyleBackColor = false;
             BtnAdd.Click += BtnAdd_Click;
-            // 
-            // BtnUpdate
-            // 
-            BtnUpdate.BackColor = Color.FromArgb(12, 128, 222);
-            BtnUpdate.FlatStyle = FlatStyle.Flat;
-            BtnUpdate.ForeColor = Color.White;
-            BtnUpdate.Location = new Point(456, 611);
-            BtnUpdate.Margin = new Padding(4, 5, 4, 5);
-            BtnUpdate.Name = "BtnUpdate";
-            BtnUpdate.Size = new Size(380, 58);
-            BtnUpdate.TabIndex = 22;
-            BtnUpdate.Text = "update";
-            BtnUpdate.UseVisualStyleBackColor = false;
             // 
             // Txtaddress
             // 
@@ -172,12 +159,12 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(65, 484);
+            label5.Location = new Point(83, 484);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(140, 25);
+            label5.Size = new Size(112, 25);
             label5.TabIndex = 23;
-            label5.Text = "Patient address:";
+            label5.Text = "환자 집주소:";
             // 
             // addPatient
             // 
@@ -186,7 +173,6 @@
             ClientSize = new Size(884, 915);
             Controls.Add(Txtaddress);
             Controls.Add(label5);
-            Controls.Add(BtnUpdate);
             Controls.Add(BtnAdd);
             Controls.Add(panel1);
             Controls.Add(TxtPatientID);
@@ -216,7 +202,6 @@
         private Label label2;
         private Label label1;
         public Button BtnAdd;
-        public Button BtnUpdate;
         public TextBox TxtPatientID;
         public TextBox TxtPatientPhone;
         public TextBox TxtPatinetName;
